@@ -133,8 +133,8 @@ func main() {
 	http.HandleFunc("/add", enableCORS(addPoints))
 	http.HandleFunc("/get", enableCORS(getPoints))
 
-	fmt.Println("Listening on 0.0.0.0:1216")
-	err := http.ListenAndServe("0.0.0.0:1216", nil)
+	fmt.Println("Listening on 0.0.0.0:8001")
+	err := http.ListenAndServe("0.0.0.0:8001", nil)
 	if err != nil {
 		fmt.Println("Error:", err.Error())
 	}

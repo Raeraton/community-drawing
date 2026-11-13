@@ -1,4 +1,4 @@
-const backend_addr = "http://drawing-board.duckdns.org:1216/";
+/// const backend_addr = "http://drawing-board.duckdns.org:1216/";
 
 const canvas = document.getElementById("drawing-screen");
 const color_picker = document.getElementById("color-picker");
@@ -100,7 +100,7 @@ setInterval(async()=>{
     lines = [];
 
     if( lines_to_send.length > 0){
-        let resp = await fetch(backend_addr+"add",{
+        let resp = await fetch("/add",{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -115,7 +115,7 @@ setInterval(async()=>{
         }
     }
 
-    let resp = await fetch(backend_addr+"get",{
+    let resp = await fetch("/get",{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
