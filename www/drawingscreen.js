@@ -1,4 +1,4 @@
-const backend_addr = "http://192.168.1.98:1216/";
+const backend_addr = "http://drawing-board.duckdns.org:1216/";
 
 const canvas = document.getElementById("drawing-screen");
 const color_picker = document.getElementById("color-picker");
